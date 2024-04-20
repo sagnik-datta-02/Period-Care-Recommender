@@ -1,7 +1,7 @@
 
 # Maitri AI - Period Care Recommender
 
-![Period Care Recommender Logo](https://i.postimg.cc/kXyd7jVr/maitri.png)
+[![maitri2.png](https://i.postimg.cc/1znTVMz3/maitri2.png)](https://postimg.cc/wtzFSXJC)
 
 Maitri-AI is your Period Care Recommender. It is a personalized care suggestion tool designed to provide tailored recommendations based on the phase of the menstrual cycle. Whether you're in the menstrual phase, proliferative phase, ovulation phase, or luteal phase, this tool offers customized advice to help you take care of yourself better.
 
