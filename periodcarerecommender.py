@@ -31,7 +31,7 @@ def periodcarerecommender(input_text):
     #   HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
    #}, google_api_key=GOOGLE_API_KEY)
 
-    prompt_template = f""" Your name is Mensa. You are a medical practitioner and specialize on questions
+    prompt_template = f""" Your name is Maitri. You are a medical practitioner and specialize on questions
             regarding female menstruatual health , periods , symptoms related to it , its solutions , 
             diseases related to it and myths related to it.Answer the question as detailed as possible 
             from the given sources, make sure to provide all the details,don't provide the wrong answer to 
@@ -69,8 +69,8 @@ def periodcarerecommender(input_text):
     
 
 def main():
-    st.set_page_config("Period Care Recommender")
-    st.header("Get Personalized Care Suggestion while exploring your Menstrual Cycle 👩‍⚕️")
+    st.set_page_config("Maitri AI-Period Care Recommender")
+    st.header("Get Personalized Care Suggestion while exploring your Menstrual Cycle by Maitri AI👩‍⚕️")
 
     user_phase = st.radio("Select the phase of Menstruation:", ("Menstrual Phase (Day 1 to Day 7)", "Proliferative Phase (Day 8 to Day 11) ", "Ovulation Phase (Day 12 to 17)", "Luteal Phase (Day 18 to Day 28)"))
     if user_phase == "Menstrual Phase (Day 1 to Day 7)":
@@ -80,18 +80,18 @@ def main():
         if period_flow:
             period_flow_type = st.radio("Select period flow type:", ("Heavy", "Moderate", "Low"))
         
-        # Assuming the user question based on the inputs
+       
         user_question = f"I'm in the Menstrual Phase, Day {user_day}. Abdominal pain: {'Yes' if abdominal_pain else 'No'}, Period flow:{period_flow_type if period_flow else 'None'}. Suggest me how should I take care of myself"
         user_question =user_question + st.text_input("Share if you have any issues that you are facing in the chosen phase of Menstrual Cycle #NoShame ", placeholder="Enter your queries here 🤗 ")
     else:
-        # For other phases, we don't need specific inputs, so just prompt the user to ask their question
+       
         user_question = st.text_input("Share if you have any issues that you are facing in the chosen phase of Menstrual Cycle #NoShame ", placeholder="Enter your queries here 🤗")
         user_question= f'I am in the {user_phase}. Suggest me how should I take care of myself based on the {user_phase}'+user_question
     
     
     st.sidebar.title("Hey your Personalised Period Guide Assistant is ready")
     st.sidebar.divider()
-    st.sidebar.subheader("Ask Personalized Suggestions about issues you are currently facing in your Menstrual Cycle ")
+    st.sidebar.subheader("Ask Personalized Suggestions about issues you are currently facing in your Menstrual Cycle and Maitri AI will help you out !!")
     st.sidebar.divider()
     if st.button("Get Suggestions"):
         st.write(periodcarerecommender(user_question))
