@@ -12,14 +12,14 @@ Maitri-AI is your Period Care Recommender. It is a personalized care suggestion 
 - **Interactive Interface**: User-friendly interface with options to select the phase and provide additional information about symptoms.
 - **Intelligent Recommendation Engine**: Powered by Langchain and Mistral AI (Mixtral-8x7B-Instruct) technologies to deliver accurate and detailed care recommendations.
 - **Privacy and Confidentiality**: Your privacy is important. No personal data is stored, and all interactions are kept confidential.
-- 
+  
 ## Technologies Used
 
 - **Backend Language**: Python
 - **AI Framework**: Langchain
 - **Base Large Language Model Used**: Mixtral-8x7B-Instruct hosted by Fireworks AI
 - **Web Framework**: Streamlit UI
-- 
+  
 ## How to Use
 
 1. **Select Menstrual Phase**: Choose the phase of your menstrual cycle from the options provided.
